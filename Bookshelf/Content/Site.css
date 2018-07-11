@@ -7,6 +7,33 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #9d898e;
+    color:white;
+    font-family:helvetica;
+}
+
+a{
+    color:black;
+}
+
+a:hover {
+    color: gray;
+    text-decoration:none;
+}
+#edit{
+    background-color: red;
+}
+
+#details{
+    background-color:orange;
+}
+
+#delete{
+    background-color:yellow;
+}
+
+.button {
+    box-shadow: 10px 10px gray;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -15,6 +42,8 @@
 .dl-horizontal dt {
     white-space: normal;
 }
+
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,

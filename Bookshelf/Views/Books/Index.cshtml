@@ -29,29 +29,59 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ISBN)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublishedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </td>
+            <td>
+                <button class="button" id="edit"> @Html.ActionLink("Edit", "Edit", new { id = item.ID }) </button>|
+                <button class="button" id="details">@Html.ActionLink("Details", "Details", new { id = item.ID })</button> |
+                <button class="button" id="delete">@Html.ActionLink("Delete", "Delete", new { id = item.ID })</button>
+            </td>
+
+        </tr>
+    }
 
 </table>
+
+
+
+<!-- Start Bootstrap Carousel BODY section -->
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li>
+                <img src="~/carouselPics/harrypotter.jpg" alt="Lake" title="Lake" id="wows1_0" />
+            </li>
+            <li><img src="~/carouselPics/happy feet.jpg" alt="Landscape" title="Landscape" id="wows1_1" />
+            </li>
+            <li><img src="~/carouselPics/the longest yard.jpg" alt="Sunset" title="Sunset" id="wows1_2" />
+            </li>
+        </ul>
+    </div>
+    @*<div class="ws_bullets">
+        <div>
+            <a href="#" title="Lake"><span><img src="data1/tooltips/lake.jpg" alt="Lake" />1</span></a>
+            <a href="#" title="Landscape"><span><img src="data1/tooltips/landscape.jpg" alt="Landscape" />2</span></a>
+            <a href="#" title="Sunset"><span><img src="data1/tooltips/sunset.jpg" alt="Sunset" />3</span></a>
+        </div>
+    </div>*@
+    <div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End Bootstrap Carousel BODY section -->
